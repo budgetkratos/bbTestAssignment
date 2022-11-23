@@ -4,6 +4,7 @@ import InfoBlock from "../../components/InfoBlockComponent/InfoBlock";
 import ShipFrontPage from "../../components/DetailViewFrontPage/ShipFrontPage";
 import ShipFrontPageStyles from "../../components/DetailViewFrontPage/ShipFrontPage.module.css";
 import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
+import MissionList from "../../components/MissionListComponent/MissionList";
 
 export default function IndividualShipData() {
   const router = useRouter();
@@ -44,7 +45,7 @@ export default function IndividualShipData() {
     <div className={ShipFrontPageStyles.container}>
       <ShipFrontPage props={ship} />
       <InfoBlock props={ship} />
+      <MissionList props={ship} />
     </div>
-    // <LoadingSpinner />
   );
 }

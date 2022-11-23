@@ -33,7 +33,6 @@ export default function ShipData() {
       {ships.map((ship) => (
         <ShipCardComponent key={ship.id} props={ship} />
       ))}
-      {/* <LoadingSpinner /> */}
     </div>
   );
 }

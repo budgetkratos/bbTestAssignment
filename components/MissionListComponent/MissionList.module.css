@@ -1,0 +1,79 @@
+.container {
+  margin: 0px 20px 0px 20px;
+  padding-top: 50px;
+}
+
+.missionInfoContainer {
+  display: flex;
+}
+
+.missionInfoTitle {
+  font-family: "Indie Flower";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+
+  color: #233869;
+
+  margin-bottom: 20px;
+}
+
+.missionInfoArrow {
+  margin-left: 10px;
+}
+
+.singleMissionContainer {
+  margin: 15px 0px;
+}
+
+.missionName {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+
+  color: #1e1e1e;
+}
+
+.missionFlight {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+
+  color: #1e1e1e;
+}
+
+.cardArrowContainer {
+  display: flex;
+  padding: 15px 0px;
+  width: 100%;
+}
+
+.cardArrowLink {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.cardArrow {
+  transform: rotate(180deg);
+  left: 25px;
+  top: 20px;
+}
+
+.cardArrowText {
+  font-family: "Indie Flower";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  margin-left: 10px;
+  /* blue-3 */
+
+  color: #233869;
+}
