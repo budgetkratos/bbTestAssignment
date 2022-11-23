@@ -4,22 +4,24 @@ import InfoBlock from "../../components/InfoBlockComponent/InfoBlock";
 
 export default function IndividualShipData() {
   const router = useRouter();
-  console.log("router", router.query.id);
 
   const GET_INDIVIDUAL_SHIP = gql`
-    query shipQuery($id: ID! = "${router.query.id}") {
-      ship(id: $id) {
-        type
-        weight_kg
-        year_built
-        class
-        missions {
-          flight
-          name
-        }
-        home_port
+  query shipQuery($id: ID! = "${router.query.id}") {
+    ship(id: $id) {
+      type
+      weight_kg
+      year_built
+      class
+      missions {
+        flight
+        name
       }
+      home_port
+      image
+      name
     }
+  }
+  
   `;
 
   const { data, loading, error } = useQuery(GET_INDIVIDUAL_SHIP);
@@ -35,12 +37,10 @@ export default function IndividualShipData() {
 
   const { ship } = data;
   console.log("ship", ship);
+  console.log("router", router);
 
   return (
     <div>
-      {/* {ships.map((ship) => (
-        <ShipCard key={ship.id} props={ship} />
-      ))} */}
       <InfoBlock props={ship} />
     </div>
   );

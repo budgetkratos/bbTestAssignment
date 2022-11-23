@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
+.basicInfoContainer {
+  display: flex;
+
+  font-family: "Indie Flower", cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: right;
+  color: #233869;
+
+  padding: 0 30px 20px;
+}
+
 .infoContainer {
   width: 100%;
   display: flex;
