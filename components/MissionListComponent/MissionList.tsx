@@ -16,7 +16,10 @@ const MissionList = ({ props }) => {
       </div>
       {missions.map((mission) => {
         return (
-          <div className={MissionListStyles.singleMissionContainer}>
+          <div
+            key={`${mission.name}-${mission.missionFlight}`}
+            className={MissionListStyles.singleMissionContainer}
+          >
             <div className={MissionListStyles.missionName}>{mission.name}</div>
             <div className={MissionListStyles.missionFlight}>
               Flight: {mission.flight}
