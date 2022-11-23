@@ -1,6 +1,6 @@
 import { useQuery, gql } from "@apollo/client";
-import ShipCard from "../ShipCard/ShipCard";
-import ShipCardStyles from "../ShipCard/ShipCard.module.css";
+import ShipCardComponent from "../ShipCardComponent/ShipCard";
+import ShipCardStyles from "../ShipCardComponent/ShipCard.module.css";
 // import styles from "../birdbuddylistapp/styles/Home.module.css";
 
 const GET_SHIPS = gql`
@@ -31,7 +31,7 @@ export default function ShipData() {
   return (
     <div className={ShipCardStyles.container}>
       {ships.map((ship) => (
-        <ShipCard key={ship.id} props={ship} />
+        <ShipCardComponent key={ship.id} props={ship} />
       ))}
     </div>
   );

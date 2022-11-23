@@ -1,9 +1,9 @@
-import ShipCardStyles from "../ShipCard/ShipCard.module.css";
+import ShipCardStyles from "../ShipCardComponent/ShipCard.module.css";
 import cardArrow from "../../public/cardArrow.svg";
+import Link from "next/link";
 
 const ShipCard = ({ props }) => {
-  console.log("cardArrow", cardArrow);
-  const { image, name, type } = props;
+  const { id, image, name, type } = props;
   return (
     <div className={ShipCardStyles.cardContainer}>
       <img className={ShipCardStyles.image} src={image} />
@@ -12,7 +12,9 @@ const ShipCard = ({ props }) => {
           <div className={ShipCardStyles.shipName}>{name}</div>
           <div className={ShipCardStyles.shipType}>{type}</div>
         </div>
-        <img className={ShipCardStyles.cardArrow} src={cardArrow.src} />
+        <Link href={`/details/${id}`}>
+          <img className={ShipCardStyles.cardArrow} src={cardArrow.src} />
+        </Link>
       </div>
     </div>
   );
