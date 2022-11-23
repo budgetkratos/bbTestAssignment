@@ -6,7 +6,7 @@ import basicInfoArrow from "../../public/basicInfoArrow.svg";
 const InfoBlock = ({ props }) => {
   const { home_port, missions, type, weight_kg, year_built } = props;
   return (
-    <>
+    <div className={InfoBlockStyles.frontPageInfoContainer}>
       <div className={InfoBlockStyles.basicInfoContainer}>
         <div className={InfoBlockStyles.basicInfoTitle}>Basic info</div>
         <img
@@ -18,10 +18,7 @@ const InfoBlock = ({ props }) => {
       <InfoItem titleData={`${weight_kg} kg`} title="Weight" />
       <InfoItem titleData={props.class} title="Class" />
       <InfoItem titleData={home_port} title="Home port" />
-      <Link href="/">
-        <button>back</button>
-      </Link>
-    </>
+    </div>
   );
 };
 

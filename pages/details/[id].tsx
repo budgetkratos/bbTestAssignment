@@ -1,6 +1,8 @@
 import { useRouter } from "next/router";
 import { useQuery, gql } from "@apollo/client";
 import InfoBlock from "../../components/InfoBlockComponent/InfoBlock";
+import ShipFrontPage from "../../components/DetailViewFrontPage/ShipFrontPage";
+import ShipFrontPageStyles from "../../components/DetailViewFrontPage/ShipFrontPage.module.css";
 
 export default function IndividualShipData() {
   const router = useRouter();
@@ -40,7 +42,8 @@ export default function IndividualShipData() {
   console.log("router", router);
 
   return (
-    <div>
+    <div className={ShipFrontPageStyles.container}>
+      <ShipFrontPage props={ship} />
       <InfoBlock props={ship} />
     </div>
   );
