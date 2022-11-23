@@ -2,8 +2,9 @@ import MissionListStyles from "../MissionListComponent/MissionList.module.css";
 import missionInfoArrow from "../../public/basicInfoArrow.svg";
 import cardArrow from "../../public/cardArrow.svg";
 import Link from "next/link";
+import { MissionObject, MissionsListProps } from "../../helpers/interfaces";
 
-const MissionList = ({ props }) => {
+const MissionList = ({ props }: MissionsListProps) => {
   const { missions } = props;
   return (
     <div className={MissionListStyles.container}>
@@ -14,7 +15,7 @@ const MissionList = ({ props }) => {
           src={missionInfoArrow.src}
         />
       </div>
-      {missions.map((mission) => {
+      {missions.map((mission: MissionObject) => {
         return (
           <div
             key={`${mission.name}-${mission.missionFlight}`}

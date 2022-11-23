@@ -1,8 +1,9 @@
 import Link from "next/link";
 import ShipFrontPageStyles from "../DetailViewFrontPage/ShipFrontPage.module.css";
 import cardArrow from "../../public/cardArrow.svg";
+import { ShipFrontPageProps } from "../../helpers/interfaces";
 
-const ShipFrontPage = ({ props }) => {
+const ShipFrontPage = ({ props }: ShipFrontPageProps) => {
   const { name, image, type } = props;
 
   return (

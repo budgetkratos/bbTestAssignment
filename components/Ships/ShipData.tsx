@@ -2,6 +2,7 @@ import { useQuery, gql } from "@apollo/client";
 import ShipCardComponent from "../ShipCardComponent/ShipCard";
 import ShipCardStyles from "../ShipCardComponent/ShipCard.module.css";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
+import { ShipProps } from "../../helpers/interfaces";
 
 const GET_SHIPS = gql`
   query shipsQuery {
@@ -30,7 +31,7 @@ export default function ShipData() {
 
   return (
     <div className={ShipCardStyles.container}>
-      {ships.map((ship) => (
+      {ships.map((ship: ShipProps) => (
         <ShipCardComponent key={ship.id} props={ship} />
       ))}
     </div>

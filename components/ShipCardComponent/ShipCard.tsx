@@ -1,8 +1,9 @@
 import ShipCardStyles from "../ShipCardComponent/ShipCard.module.css";
 import cardArrow from "../../public/cardArrow.svg";
 import Link from "next/link";
+import { ShipCardProps } from "../../helpers/interfaces";
 
-const ShipCard = ({ props }) => {
+const ShipCard = ({ props }: ShipCardProps) => {
   const { id, image, name, type } = props;
   return (
     <div className={ShipCardStyles.cardContainer}>

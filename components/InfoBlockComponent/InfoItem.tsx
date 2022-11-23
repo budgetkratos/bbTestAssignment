@@ -1,7 +1,8 @@
 import InfoBlockStyles from "./InfoBlock.module.css";
 import infoBlock from "../../public/infoBlock.svg";
+import { InfoItemProps } from "../../helpers/interfaces";
 
-const InfoItem = (props) => {
+const InfoItem = (props: InfoItemProps) => {
   const { titleData, title } = props;
   return (
     <div className={InfoBlockStyles.infoContainer}>

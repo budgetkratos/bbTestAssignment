@@ -1,10 +1,10 @@
-import Link from "next/link";
 import InfoItem from "./InfoItem";
 import InfoBlockStyles from "./InfoBlock.module.css";
 import basicInfoArrow from "../../public/basicInfoArrow.svg";
+import { InfoBlockProps } from "../../helpers/interfaces";
 
-const InfoBlock = ({ props }) => {
-  const { home_port, missions, weight_kg, year_built } = props;
+const InfoBlock = ({ props }: InfoBlockProps) => {
+  const { home_port, weight_kg, year_built } = props;
   return (
     <div className={InfoBlockStyles.frontPageInfoContainer}>
       <div className={InfoBlockStyles.basicInfoContainer}>
