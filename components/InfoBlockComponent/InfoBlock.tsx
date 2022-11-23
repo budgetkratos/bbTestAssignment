@@ -4,7 +4,7 @@ import InfoBlockStyles from "./InfoBlock.module.css";
 import basicInfoArrow from "../../public/basicInfoArrow.svg";
 
 const InfoBlock = ({ props }) => {
-  const { home_port, missions, type, weight_kg, year_built } = props;
+  const { home_port, missions, weight_kg, year_built } = props;
   return (
     <div className={InfoBlockStyles.frontPageInfoContainer}>
       <div className={InfoBlockStyles.basicInfoContainer}>
@@ -14,10 +14,14 @@ const InfoBlock = ({ props }) => {
           src={basicInfoArrow.src}
         />
       </div>
-      <InfoItem titleData={year_built} title="Year built" />
-      <InfoItem titleData={`${weight_kg} kg`} title="Weight" />
-      <InfoItem titleData={props.class} title="Class" />
-      <InfoItem titleData={home_port} title="Home port" />
+      {year_built ? (
+        <InfoItem titleData={year_built} title="Year built" />
+      ) : null}
+      {weight_kg ? (
+        <InfoItem titleData={`${weight_kg} kg`} title="Weight" />
+      ) : null}
+      {props.class ? <InfoItem titleData={props.class} title="Class" /> : null}
+      {home_port ? <InfoItem titleData={home_port} title="Home port" /> : null}
     </div>
   );
 };
