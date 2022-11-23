@@ -1,7 +1,7 @@
 import { useQuery, gql } from "@apollo/client";
 import ShipCardComponent from "../ShipCardComponent/ShipCard";
 import ShipCardStyles from "../ShipCardComponent/ShipCard.module.css";
-// import styles from "../birdbuddylistapp/styles/Home.module.css";
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
 const GET_SHIPS = gql`
   query shipsQuery {
@@ -18,7 +18,7 @@ export default function ShipData() {
   const { data, loading, error } = useQuery(GET_SHIPS);
 
   if (loading) {
-    return <h2>Loading Data...</h2>;
+    return <LoadingSpinner />;
   }
 
   if (error) {
@@ -33,6 +33,7 @@ export default function ShipData() {
       {ships.map((ship) => (
         <ShipCardComponent key={ship.id} props={ship} />
       ))}
+      {/* <LoadingSpinner /> */}
     </div>
   );
 }

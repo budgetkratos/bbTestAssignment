@@ -3,6 +3,7 @@ import { useQuery, gql } from "@apollo/client";
 import InfoBlock from "../../components/InfoBlockComponent/InfoBlock";
 import ShipFrontPage from "../../components/DetailViewFrontPage/ShipFrontPage";
 import ShipFrontPageStyles from "../../components/DetailViewFrontPage/ShipFrontPage.module.css";
+import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
 
 export default function IndividualShipData() {
   const router = useRouter();
@@ -29,7 +30,7 @@ export default function IndividualShipData() {
   const { data, loading, error } = useQuery(GET_INDIVIDUAL_SHIP);
 
   if (loading) {
-    return <h2>Loading Data...</h2>;
+    return <LoadingSpinner />;
   }
 
   if (error) {
@@ -44,5 +45,6 @@ export default function IndividualShipData() {
       <ShipFrontPage props={ship} />
       <InfoBlock props={ship} />
     </div>
+    // <LoadingSpinner />
   );
 }

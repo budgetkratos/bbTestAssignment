@@ -6,18 +6,16 @@ const ShipFrontPage = ({ props }) => {
   const { name, image, type } = props;
 
   return (
-    <>
-      <div className={ShipFrontPageStyles.frontPageContainer}>
-        <Link href="/">
-          <img className={ShipFrontPageStyles.cardArrow} src={cardArrow.src} />
-        </Link>
-        <img className={ShipFrontPageStyles.frontPageImage} src={image} />
-        <div className={ShipFrontPageStyles.frontPageTextContainer}>
-          <div className={ShipFrontPageStyles.frontPageShipTitle}>{name}</div>
-          <div className={ShipFrontPageStyles.frontPageShipType}>{type}</div>
-        </div>
+    <div className={ShipFrontPageStyles.frontPageContainer}>
+      <Link href="/">
+        <img className={ShipFrontPageStyles.cardArrow} src={cardArrow.src} />
+      </Link>
+      <img className={ShipFrontPageStyles.frontPageImage} src={image} />
+      <div className={ShipFrontPageStyles.frontPageTextContainer}>
+        <div className={ShipFrontPageStyles.frontPageShipTitle}>{name}</div>
+        <div className={ShipFrontPageStyles.frontPageShipType}>{type}</div>
       </div>
-    </>
+    </div>
   );
 };
 
