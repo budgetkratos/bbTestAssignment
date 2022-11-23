@@ -4,7 +4,6 @@ import cardArrow from "../../public/cardArrow.svg";
 
 const ShipFrontPage = ({ props }) => {
   const { name, image, type } = props;
-  console.log("props ship", props);
 
   return (
     <>

@@ -38,8 +38,6 @@ export default function IndividualShipData() {
   }
 
   const { ship } = data;
-  console.log("ship", ship);
-  console.log("router", router);
 
   return (
     <div className={ShipFrontPageStyles.container}>
