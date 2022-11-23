@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1>Collections</h1>
+        <h1 className={styles.mainTitle}>Collections</h1>
         <ClientOnly>
           <ShipData />
         </ClientOnly>

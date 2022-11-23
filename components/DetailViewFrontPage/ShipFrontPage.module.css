@@ -4,14 +4,56 @@
 
 .frontPageContainer {
   display: flex;
+  background-color: #ffffff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   /* width: 100%; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0;
+  margin-bottom: 30px;
+  box-shadow: 0px 4px 0px #d3d7e1;
+}
+
+.cardArrow {
+  position: absolute;
+  transform: rotate(180deg);
+  left: 25px;
+  top: 20px;
 }
 
 .frontPageImage {
   max-width: 100%;
   max-height: 100%;
+}
+
+.frontPageTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.frontPageShipTitle {
+  margin-top: 50px;
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 55px;
+}
+
+.frontPageShipType {
+  margin-bottom: 20px;
+
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 325;
+  font-size: 18px;
+  line-height: 24px;
+
+  color: #233869;
+
+  opacity: 0.5;
 }
