@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import ClientOnly from "../components/ClientOnly";
 import React from "react";
 import ShipData from "../components/Ships/ShipData";
 
