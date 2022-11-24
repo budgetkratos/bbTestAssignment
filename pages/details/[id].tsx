@@ -36,7 +36,7 @@ export default function IndividualShipData() {
 
   if (error) {
     console.error(error);
-    return <h2>Sorry, there's been an error...</h2>;
+    return <h2>Sorry, there has been an error...</h2>;
   }
 
   const { ship } = data;
