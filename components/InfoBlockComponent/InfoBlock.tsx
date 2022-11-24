@@ -15,7 +15,7 @@ const InfoBlock = ({ props }: InfoBlockProps) => {
         />
       </div>
       {year_built ? (
-        <InfoItem titleData={year_built} title="Year built" />
+        <InfoItem titleData={`${year_built}`} title="Year built" />
       ) : null}
       {weight_kg ? (
         <InfoItem titleData={`${weight_kg} kg`} title="Weight" />

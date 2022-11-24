@@ -77,3 +77,54 @@
 
   color: #233869;
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .container {
+    margin: 0px 50px 0px 50px;
+  }
+
+  .missionInfoTitle {
+    font-size: 26px;
+  }
+
+  .missionName {
+    font-size: 28px;
+  }
+
+  .missionFlight {
+    font-size: 18px;
+  }
+
+  .cardArrow {
+    width: 50px;
+    height: 50px;
+  }
+
+  .cardArrowText {
+    font-size: 26px;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container {
+    margin: 0px 100px 0px 100px;
+  }
+
+  .missionInfoTitle {
+    font-size: 32px;
+  }
+
+  .missionName {
+    font-size: 34px;
+    line-height: 36px;
+  }
+
+  .missionFlight {
+    font-size: 24px;
+  }
+
+  .cardArrowText {
+    font-size: 32px;
+  }
+}

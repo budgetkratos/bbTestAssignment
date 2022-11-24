@@ -58,3 +58,21 @@
 
   opacity: 0.5;
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .frontPageContainer {
+    margin: 0px 50px 50px 50px;
+  }
+  .cardArrow {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .frontPageContainer {
+    margin: 0px 100px 100px 100px;
+  }
+}
